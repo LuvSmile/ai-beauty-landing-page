@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【美業人必修】3小時變身 AI 高手 - 實戰課程</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #fdfbf7; scroll-behavior: smooth; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .gradient-gold { background: linear-gradient(135deg, #d4af37 0%, #f2d06b 100%); }
+        .hero-pattern { background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-item.active .faq-content { max-height: 300px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+    
+    <header class="relative bg-white pt-12 pb-20 hero-pattern border-b border-stone-100">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <span class="inline-block px-4 py-1 mb-6 text-sm font-semibold tracking-widest text-white uppercase bg-pink-400 rounded-full shadow-sm">美業職人效率革命</span>
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-900">
+                別讓發文耽誤你的美手！<br>
+                <span class="text-pink-500 font-serif italic">3 小時掌握 AI 流量密碼</span>
+            </h1>
+            
+            <div class="mb-10 inline-flex flex-col items-center p-6 bg-white border border-stone-200 rounded-3xl shadow-xl">
+                <span class="text-sm text-gray-500 mb-2 font-bold uppercase tracking-widest">限時早鳥優惠倒數</span>
+                <div class="flex space-x-4 text-pink-600 font-mono text-3xl font-bold" id="timer">
+                    <div class="flex flex-col"><span id="days">00</span><span class="text-[10px] text-gray-400">Days</span></div>
+                    <span>:</span>
+                    <div class="flex flex-col"><span id="hours">00</span><span class="text-[10px] text-gray-400">Hrs</span></div>
+                    <span>:</span>
+                    <div class="flex flex-col"><span id="minutes">00</span><span class="text-[10px] text-gray-400">Min</span></div>
+                    <span>:</span>
+                    <div class="flex flex-col"><span id="seconds">00</span><span class="text-[10px] text-gray-400">Sec</span></div>
+                </div>
+            </div>
+
+<div class="max-w-4xl mx-auto mb-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
+    <img src="BbannerbyLRL.png" alt="美業 AI 轉型實戰營主視覺" class="w-full h-auto block">
+</div>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6jDG3d9No0L0omXxn-pzLvGBwY5SuCgUTEbYnXPfCndItcw/viewform" class="gradient-gold text-white px-12 py-5 rounded-full text-xl font-bold hover:shadow-2xl transform transition hover:scale-105 inline-block">立即報名，搶佔名額</a>
+        </div>
+    </header>
+
+    <section class="py-10 bg-stone-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-16 underline decoration-pink-300 underline-offset-8">您是否也有這些煩惱？</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-10 rounded-2xl shadow-sm">
+                    <div class="text-5xl mb-6">✍️</div>
+                    <h3 class="text-xl font-bold mb-4">不會寫文案</h3>
+                    <p class="text-gray-500">拍了美美的作品，想到要寫 IG 敘述就頭痛？總覺得文字不夠吸睛？</p>
+                </div>
+                <div class="bg-white p-10 rounded-2xl shadow-sm">
+                    <div class="text-5xl mb-6">📅</div>
+                    <h3 class="text-xl font-bold mb-4">沒時間想活動</h3>
+                    <p class="text-gray-500">節慶行銷不知道怎麼辦？想要提升業績卻沒靈感設計促銷活動？</p>
+                </div>
+                <div class="bg-white p-10 rounded-2xl shadow-sm">
+                    <div class="text-5xl mb-6">💬</div>
+                    <h3 class="text-xl font-bold mb-4">不知道回訊息</h3>
+                    <p class="text-gray-500">客人訊息回不完，遇到難搞諮詢或預約不知道如何優雅應對？</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-stone-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">3 小時實戰課程大綱</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+                    <span class="text-pink-400 font-bold mb-4 block">1st Hour</span>
+                    <h4 class="text-xl font-bold mb-4">打造專屬分身：讓 AI 學會你的設計靈魂</h4>
+                    <ul class="text-gray-600 space-y-3 text-sm">
+                        <li>• 餵養風格：讓 ChatGPT 深度理解你的美學觀點</li>
+                        <li>• 萬能公式：掌握美業萬用指令，拒絕機器感</li>
+                        <li>• 即刻產出：現場產出 3 組具溫度的品牌 Slogan</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+                    <span class="text-pink-400 font-bold mb-4 block">2nd Hour</span>
+                    <h4 class="text-xl font-bold mb-4">流量變現術：產出讓人想預約的進攻型文案</h4>
+                    <ul class="text-gray-600 space-y-3 text-sm">
+                        <li>• 作品集包裝：讓 AI 幫作品寫出「高級感」描述</li>
+                        <li>• 活動印鈔機：5 分鐘規劃出爆款節慶促銷案</li>
+                        <li>• 實戰演練：完成一則高轉發潛力的 IG 貼文草稿</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+                    <span class="text-pink-400 font-bold mb-4 block">3rd Hour</span>
+                    <h4 class="text-xl font-bold mb-4">優雅溝通與 AI 視覺美學力</h4>
+                    <ul class="text-gray-600 space-y-3 text-sm">
+                        <li>• 情商模板：優雅回覆客訴、改期或預約諮詢</li>
+                        <li>• 視覺指導：讓 AI 成為攝影總監，提供排版靈感</li>
+                        <li>• 實戰健檢：講師親自優化專屬指令，課後立即可用</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-sm border border-stone-100 overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-3 items-center p-8 md:p-10 gap-10">
+        
+        <div class="col-span-1 flex justify-center">
+            <div class="w-48 h-64 md:w-56 md:h-72 rounded-[120px] overflow-hidden shadow-inner bg-stone-50 border-2 border-stone-100">
+                <img src="BteacheravatarbyLRL.png" alt="寶妮老師" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <div class="col-span-1 md:col-span-2 text-left">
+    
+            <div class="space-y-3 text-gray-600 leading-normal text-base">
+                 <h3 class="text-2xl font-bold text-gray-800 mb-1">
+                就是i愛雜學製作人 <span class="text-pink-600"><span class="text-pink-600">i愛微笑</span>
+        </h3>
+
+                <p>
+                    我是i愛微笑，在「一人校長兼撞鐘」的實戰路上，我深知經營者的在專業技術與行政雜務之間拉扯的辛勞。</p><br>
+
+    <p class="text-lg text-gray-700 font-semibold mb-6 leading-relaxed italic border-l-4 border-pink-200 pl-4">
+        我不只帶你上手 AI，更要教你如何以<span class="font-bold text-indigo-600">最小的成本投入</span>，<br>
+    <span class="text-2xl font-extrabold text-gray-900">極大化你的美學產出。</span>
+    </p><br>
+
+                    <p>我擅長將 <strong>AI 工具 × 美業實務 × 行銷思維</strong> 深度整合，強項是將跨領域的「雜學」專業，轉化為美業人<strong>「秒懂、好上手」</strong>的實戰指令。
+                    幫助不懂科技、不會設計、不擅長寫文的美業經營者，
+                    用最少的時間與成本，做出媲美專業團隊的品牌感。
+                </p>
+
+                <div class="pt-4 mt-4 border-t border-stone-100">
+                    <p class="text-sm text-pink-600 font-bold mb-1">
+                        ● 我相信：
+                    </p>
+<p class="text-sm text-gray-500 italic leading-relaxed">
+    科技不應是門檻，而是成為你最貼心的<strong class="text-indigo-600 not-italic">「隱形助理」</strong>。
+    幫你處理繁瑣的技術細節，是為了讓你把最好的自己，留給最熱愛的美業創作。</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+    
+    <section id="register" class="py-24 bg-white text-center">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="bg-stone-50 rounded-[3rem] p-12 border-2 border-pink-100 relative shadow-2xl">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 gradient-gold text-white px-8 py-2 rounded-full font-bold">限時早鳥報名中</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-1">
+                厭倦了「一人校長兼撞鐘」的忙碌嗎？ <span class="text-pink-600"></span><br>
+            </h3>
+                <h2 class="text-3xl font-bold mb-6 mt-4">掌握 AI，讓專業更輕鬆</h2>
+                <div class="space-y-4 mb-10 text-left md:px-10 text-gray-700">
+                    <p class="border-b border-stone-200 pb-2">📍 <strong>課程形式：</strong> [實體場-地點待定 / 線上場-Zoom]</p>
+                    <p class="border-b border-stone-200 pb-2">📅 <strong>上課時間：</strong> [填入日期/時間]</p>
+                    <p class="border-b border-stone-200 pb-2">🎟️ <strong>適合對象：</strong> 美甲、美睫、美容、紋繡師，及對美業懷抱熱忱的嚮往者。</p>
+                    <p class="border-b border-stone-200 pb-2">🔄 <strong>席次安排：</strong> 採志願序制，我們將依報名順序媒合。</p>
+                    <p class="border-b border-stone-200 pb-2">📅 <strong>時段選擇：</strong> 包含週三下午場與週一晚間進修場。</p>
+                </div>
+                <div class="mb-10">
+                    <span class="text-gray-400 line-through text-lg">原價 $3,600</span>
+                    <div class="text-5xl font-bold text-pink-500 mt-2">早鳥價 $1,680</div>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6jDG3d9No0L0omXxn-pzLvGBwY5SuCgUTEbYnXPfCndItcw/viewform" class="w-full block gradient-gold text-white text-center py-5 rounded-2xl text-2xl font-bold hover:shadow-xl transition shadow-lg">立即搶先報名</a>
+                <p class="text-gray-400 mt-6 text-sm">※ 每個場次僅限 12 名學員，額滿即關閉報名</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-stone-50 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 美業職人 AI 效率革命課程. All Rights Reserved by &lt;就是I愛雜學｜JustiLuvPhilomath&gt;</p>
+    </footer>
+
+    <script>
+        // 倒數計時器設定 (設定為當前日期 + 3天)
+        let countDownDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000);
+        let x = setInterval(function() {
+            let now = new Date().getTime();
+            let distance = countDownDate - now;
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "優惠已結束";
+            }
+        }, 1000);
+
+        function toggleFAQ(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
