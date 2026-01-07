@@ -227,10 +227,10 @@
             <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
                 <div class="flex items-center">
                     <span class="text-xl mr-4">📅</span>
-                    <span class="font-black text-blue-800 text-lg">2/03(二) 或 2/05(四)年前最終加碼預約｜VIP 優先候補
+                    <span class="font-black text-blue-800 text-lg">2/03(二) 或 2/05(四)年前最終加碼預約｜預約 VIP 優先候補
 </span>
                 </div>
-                <span class="mt-2 md:mt-0 self-start bg-blue-600 text-white px-3 py-1 rounded-full text-[10px] font-bold">年前最後衝刺</span>
+                <span class="mt-2 md:mt-0 self-start bg-blue-600 text-white px-3 py-1 rounded-full text-[10px] font-bold animate-pulse shadow-md"><srong>年前最後衝刺</srong></span>
             </div>
             <div class="ml-9 pl-1 border-l-2 border-blue-100">
            <p class="text-blue-1000/80 text-xs mt-1 leading-relaxed font-medium">
@@ -373,15 +373,22 @@
                     <span class="text-xl mr-4">📅</span>
                     <span class="font-black text-blue-800 text-lg">2/03(二) 或 2/05(四) 年前最終加碼預約</span>
                 </div>
-                <span class="mt-2 md:mt-0 self-start bg-blue-800 text-white px-3 py-1 rounded-full text-[10px] font-bold">年前最後衝刺</span>
+                <span class="mt-2 md:mt-0 self-start bg-blue-800 text-white px-3 py-1 rounded-full text-[10px] font-bold animate-pulse shadow-md" >年前最後衝刺</span>
             </div>
             <div class="ml-9 pl-1 border-l-2 border-blue-100">
                 <p class="text-blue-600/800 text-xs leading-relaxed font-medium">
-                    1 月時段皆不方便？別擔心！勾選此項加入「優先候補名單」，我們將為您保留早鳥優惠資格，並在加碼場確定後，第一時間為您送上 VIP 預約通知！
+                    <strong>預約 VIP 優先</strong><br>
+                    1月時段皆不方便？別擔心！勾選此項加入「優先候補名單」，我們將為您保留早鳥優惠資格，並在加碼場確定後，第一時間為您送上 VIP 預約通知！
                 </p>
             </div>
         </div>
     </div>
+    <div class="mt-16 pb-10 border-t border-gray-100 pt-8 px-6 text-center">
+    <p class="text-[11px] text-gray-400 leading-relaxed max-w-2xl mx-auto italic">
+        【學員權益保障】<br>
+        為維持課程品質，i愛微笑保留各場次內容調整與取消之權利。若因人數不足或其他不可抗力因素導致無法開課，我們將於「課前 7 天」主動聯繫，並完成 100% 全額退費流程，請職人老師安心預約。
+    </p>
+</div>
 </div>
     
 </div>
@@ -417,19 +424,33 @@
     <p class="mt-6 text-8m text-darkgray-400">※ 填寫表單後，請務必加入 LINE <strong>48小時內完成繳費</strong>，確認鎖定<strong>限時早鳥席次 </strong>※ </p>
 </div>
 
-    <footer class="py-12 bg-stone-50 text-center text-gray-400 text-8m">
+<div class="mt-2 pb-2 border-t border-gray-100 pt-4 px-6 text-center">
+    <div class="max-w-3xl mx-auto bg-gray-50/50 rounded-2xl p-6 border border-gray-100/50">
+        
+        <div class="mb-5">
+            <h4 class="text-[15px] font-bold text-gray-800 mb-2 tracking-widest">【 學員權益保障 】</h4>
+            <p class="text-[14px] text-gray-500 leading-7 tracking-wide">
+                為確保教學品質，<span class="text-pink-500 font-semibold">i愛微笑</span> 堅持小班制實戰教學。<br class="hidden md:block">
+                <span class="font-semibold text-gray-700">主辦單位</span> 保留各場次內容調整與取消之權利。若因人數不足或其他不可抗力因素導致無法開課，<br class="hidden md:block">
+                我們將於課前 7 天主動聯繫，並完成 <span class="underline decoration-pink-200 underline-offset-4">100% 全額退費</span>，保障職人老師權益。
+            </p>
+        </div>
+        
+        <div class="w-8 h-[1px] bg-gray-200 mx-auto mb-6"></div>
+
+        <div>
+            <h4 class="text-[15px] font-bold text-gray-600 mb-2 tracking-widest">【 個人資料保護告知 】</h4>
+            <p class="text-[14px] text-gray-400 leading-6 italic tracking-tight">
+                您於本表單填寫之資料（姓名、電話、LINE ID 等）僅限於「美業職人效率革命」課程報名對帳、<br class="hidden md:block">
+                課前通知及後續學習資訊發送之用。主辦單位承諾嚴格保護您的隱私，不向第三方洩漏或轉售。
+            </p>
+        </div>
+    </div>
+</div>
+
+    <footer class="bg-stone-50 text-center text-gray-400 text-8m">
         <p>&copy; 2025 美業職人 AI 效率革命課程. All Rights Reserved by &lt;© 2024-Present 就是I愛雜學｜JustiLuv Philomath&gt;</p>
     </footer>
-
- /*
-  專案：美業職人效率革命 - 智慧型自動變色計時器
-  功能：
-  1. 自動偵測當前日期，切換三個不同波段的截止時間。
-  2. 當距離截止時間小於 24 小時時，文字自動變更為「警示紅」並增加發光效果。
-  3. 倒數結束後自動接棒至下一場次。
-*/
-
-// --- 建議貼在 </body> 標籤之前 ---
 
 <script>
     // 1. 設定三個階段的截止時間 (可根據實際需求修改日期)
