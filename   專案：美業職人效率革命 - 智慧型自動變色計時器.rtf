@@ -1,0 +1,79 @@
+{\rtf1\ansi\ansicpg950\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /*\
+  \uc0\u23560 \u26696 \u65306 \u32654 \u26989 \u32887 \u20154 \u25928 \u29575 \u38761 \u21629  - \u26234 \u24935 \u22411 \u33258 \u21205 \u35722 \u33394 \u35336 \u26178 \u22120 \
+  \uc0\u21151 \u33021 \u65306 \
+  1. \uc0\u33258 \u21205 \u20597 \u28204 \u30070 \u21069 \u26085 \u26399 \u65292 \u20999 \u25563 \u19977 \u20491 \u19981 \u21516 \u27874 \u27573 \u30340 \u25130 \u27490 \u26178 \u38291 \u12290 \
+  2. \uc0\u30070 \u36317 \u38626 \u25130 \u27490 \u26178 \u38291 \u23567 \u26044  24 \u23567 \u26178 \u26178 \u65292 \u25991 \u23383 \u33258 \u21205 \u35722 \u26356 \u28858 \u12300 \u35686 \u31034 \u32005 \u12301 \u20006 \u22686 \u21152 \u30332 \u20809 \u25928 \u26524 \u12290 \
+  3. \uc0\u20498 \u25976 \u32080 \u26463 \u24460 \u33258 \u21205 \u25509 \u26834 \u33267 \u19979 \u19968 \u22580 \u27425 \u12290 \
+*/\
+\
+// --- \uc0\u24314 \u35696 \u36028 \u22312  </body> \u27161 \u31844 \u20043 \u21069  ---\
+\
+<script>\
+    // 1. \uc0\u35373 \u23450 \u19977 \u20491 \u38542 \u27573 \u30340 \u25130 \u27490 \u26178 \u38291  (\u21487 \u26681 \u25818 \u23526 \u38555 \u38656 \u27714 \u20462 \u25913 \u26085 \u26399 )\
+    const phases = [\
+        \{ name: "\uc0\u39318 \u27874 \u20808 \u39493 \u22580 \u65372 \u26089 \u40165 \u20498 \u25976 ", date: "2026-01-13T23:59:59" \},\
+        \{ name: "\uc0\u24180 \u21069 \u26368 \u32066 \u22580 \u65372 \u38480 \u26178 \u25654 \u20301 ", date: "2026-01-23T23:59:59" \},\
+        \{ name: "2\uc0\u26376 \u21152 \u30908 \u22580 \u65372 \u38928 \u32004 \u20445 \u30041 ", date: "2026-01-30T23:59:59" \}\
+    ];\
+\
+    function startSmartTimer() \{\
+        const timerTitle = document.getElementById("timer-title");\
+        const timeElements = ["days", "hours", "minutes", "seconds"];\
+        \
+        setInterval(() => \{\
+            const now = new Date();\
+            // \uc0\u23563 \u25214 \u30446 \u21069 \u26368 \u25509 \u36817 \u19988 \u23578 \u26410 \u25130 \u27490 \u30340 \u22580 \u27425 \
+            const activePhase = phases.find(p => new Date(p.date) > now);\
+\
+            if (activePhase) \{\
+                const target = new Date(activePhase.date);\
+                const diff = target - now;\
+\
+                // \uc0\u35336 \u31639 \u26178 \u38291 \u21934 \u20301 \
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));\
+                const h = Math.floor((diff / (1000 * 60 * 60)) % 24);\
+                const m = Math.floor((diff / 1000 / 60) % 60);\
+                const s = Math.floor((diff / 1000) % 60);\
+\
+                // \uc0\u26356 \u26032 \u30059 \u38754 \u25976 \u23383 \
+                document.getElementById("days").innerText = d.toString().padStart(2, '0');\
+                document.getElementById("hours").innerText = h.toString().padStart(2, '0');\
+                document.getElementById("minutes").innerText = m.toString().padStart(2, '0');\
+                document.getElementById("seconds").innerText = s.toString().padStart(2, '0');\
+                \
+                // \uc0\u26356 \u26032 \u21205 \u24907 \u27161 \u38988 \
+                timerTitle.innerText = activePhase.name;\
+\
+                // --- \uc0\u55357 \u56481  \u33258 \u21205 \u35722 \u33394 \u37007 \u36655  (\u23567 \u26044  24 \u23567 \u26178 ) ---\
+                if (diff < 86400000) \{ \
+                    timeElements.forEach(id => \{\
+                        const el = document.getElementById(id);\
+                        el.style.color = "#FF4D4D"; // \uc0\u35686 \u31034 \u32005 \
+                        el.style.textShadow = "0 0 10px rgba(255, 77, 77, 0.3)";\
+                    \});\
+                    timerTitle.style.color = "#FF4D4D";\
+                \} else \{\
+                    timeElements.forEach(id => \{\
+                        const el = document.getElementById(id);\
+                        el.style.color = "#D1437A"; // \uc0\u21697 \u29260 \u26691 \u32005 \
+                        el.style.textShadow = "none";\
+                    \});\
+                    timerTitle.style.color = "#1F2937"; // \uc0\u27161 \u38988 \u24674 \u24489 \u28145 \u28784 \
+                \}\
+            \} else \{\
+                timerTitle.innerText = "\uc0\u20778 \u24800 \u24050 \u20840 \u25976 \u25130 \u27490 \u65292 \u35531 \u31169 \u35338 \u35566 \u35426 ";\
+                timeElements.forEach(id => document.getElementById(id).innerText = "00");\
+            \}\
+        \}, 1000);\
+    \}\
+\
+    // \uc0\u21855 \u21205 \u31243 \u24335 \
+    startSmartTimer();\
+</script>}
